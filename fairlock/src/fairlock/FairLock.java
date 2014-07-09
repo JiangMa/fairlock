@@ -25,7 +25,8 @@ public class FairLock implements Lock {
 				e.printStackTrace();
 			}
 
-	
+		}
+		synchronized (this) {
 			isLocked = true;
 			lockQueue.remove(0);
 		}
